@@ -89,6 +89,13 @@ public interface ShortLinkService extends IService<ShortLinkDO> {
      */
     void restoreUrl(String shortUri, ServletRequest request, ServletResponse response);
 
+    /**
+     * 短链接跳转(分片版本
+     *
+     * @param shortUri 短链接后缀
+     * @param request  HTTP 请求
+     * @param response HTTP 响应
+     */
     @SneakyThrows
     void restoreUrlBySharding(String shortUri, ServletRequest request, ServletResponse response);
 
